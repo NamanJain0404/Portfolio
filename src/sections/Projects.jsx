@@ -157,14 +157,16 @@ const projects = [
             Projects
           </h2>
   
-          <div className="grid md:grid-cols-2 gap-8 mt-14">
+          {/* <div className="grid md:grid-cols-2 gap-8 mt-14"> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-14">
             {projects.map((project, index) => (
               <div
                 key={index}
                 // className="bg-slate-800 rounded-2xl p-6 hover:-translate-y-2 duration-300"
                 className="bg-slate-800 border border-slate-700 rounded-3xl p-8 hover:border-cyan-400 hover:-translate-y-2 duration-300 shadow-xl"
               >
-                <h3 className="text-2xl font-bold text-white">
+                {/* <h3 className="text-2xl font-bold text-white"> */}
+                <h3 className="text-xl md:text-2xl font-bold text-white break-words">
                   {project.title}
                 </h3>
   
@@ -180,7 +182,10 @@ const projects = [
                     <SwiperSlide key={i}>
                       <img
                         src={img}
-                        className="w-full h-65 object-cover rounded-2x1"
+                        alt={project.title}
+                        className="w-full h-auto max-h-[400px] object-contain rounded-2xl bg-white"
+                        // className="w-full h-52 md:h-64 object-contain rounded-2xl bg-white"
+                        // className="w-full h-65 object-cover rounded-2x1"
                       />
                     </SwiperSlide>
                   ))}
@@ -212,7 +217,8 @@ const projects = [
                 </div>
 
                 {/* <p className="mt-4 text-cyan-400 font-semibold"> */}
-                <p className="mt-6 text-cyan-400 font-medium leading-7">
+                {/* <p className="mt-6 text-cyan-400 font-medium leading-7"> */}
+                <p className="mt-6 text-cyan-400 font-medium leading-7 break-words text-sm md:text-base">
                   {project.tech}
                 </p>
   
